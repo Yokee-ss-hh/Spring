@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+        
+    <context:component-scan base-package="yokesh.beanscopeusingxml"/>
+    <bean name="xmBean1" class="yokesh.beanscopeusingxml.ScopeXML">
+        <property name="x" value="ok"/>
+        <property name="y" value="20" />
+    </bean>
+    
+    <bean name="xmBean2" class="yokesh.beanscopeusingxml.ScopeXML" scope="prototype">
+        <property name="x" value="chowdary"/>
+        <property name="y" value="23"/>
+    </bean>
+</beans>
